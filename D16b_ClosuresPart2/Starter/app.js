@@ -39,7 +39,7 @@ for (var index = 0; index < fs.length; index++) {
 }
 
 
-console.log('----------------------');
+console.log('------------------------');
 
 function buildFunctions2() {
     var arr = [];
