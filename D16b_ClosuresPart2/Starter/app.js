@@ -14,9 +14,10 @@ e a referência e o acesso permanecem a quem é devido
 */
 
 function buildFunctions() {
+
     var arr = [];
 
-    for (i = 0; i < 3; i++) {
+    for (var i = 0; i < 3; i++) {
         arr.push(
             function() {
                 console.log(i);
