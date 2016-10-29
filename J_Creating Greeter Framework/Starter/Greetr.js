@@ -1,3 +1,4 @@
+;
 (function(global, $) {
 
     //cria um novo objeto do framework, que é uma function
