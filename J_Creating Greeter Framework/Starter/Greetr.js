@@ -1,8 +1,19 @@
 (function(global, $) {
 
-})(window, jQuery);
     var Greetr = function(firstname, lastname, language) {
         return new Greetr.init(firstname, lastname, language);
+    }
+
+    var supportedLangs = ['en', 'es'];
+
+    var greetings = {
+        en: 'Hello',
+        es: 'Hola'
+    }
+
+    var formalGreetings = {
+        en: 'Greetings',
+        es: 'Saludos'
     }
 
     Greetr.prototype = {};
