@@ -22,7 +22,51 @@
     };
 
     Greetr.prototype = {
+        fullName: function() {
+            return this.firstName + ' ' + this.lastName;
+        },
 
+        validate: function(lang) {
+            if (supportedLangs.indexOf(lang) === -1) {
+                throw 'Invalid language!';
+            }
+        },
+
+        greeting: function() {
+            return greetings[this.language] + ' ' + this.firstName + '!';
+        },
+
+        formalGreeting: function() {
+            return formalGreetings[this.language] + ', ' + this.fullName() + '.';
+        },
+
+        greet: function(formal) {
+            var msg;
+            if (formal) {
+                msg = this.formalGreeting();
+            } else {
+                msg = this.greeting();
+            }
+
+            if (console) {
+                console.log(msg);
+            }
+
+            return this;
+        },
+
+        log: function() {
+            if (console) {
+                console.log(logMessages[this.language] + ': ' + this.fullName());
+            }
+            return this;
+        },
+
+        setLang: function(lang) {
+            this.validate(lang);
+            this.language = lang;
+            return this;
+        }
     };
 
     Greetr.init = function(firstname, lastname, language) {
