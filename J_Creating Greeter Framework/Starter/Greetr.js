@@ -9,14 +9,21 @@
     var greetings = {
         en: 'Hello',
         es: 'Hola'
-    }
+    };
 
     var formalGreetings = {
         en: 'Greetings',
         es: 'Saludos'
-    }
+    };
 
-    Greetr.prototype = {};
+    var logMessages = {
+        en: 'Logged in',
+        es: 'Inició sessión'
+    };
+
+    Greetr.prototype = {
+
+    };
 
     Greetr.init = function(firstname, lastname, language) {
 
