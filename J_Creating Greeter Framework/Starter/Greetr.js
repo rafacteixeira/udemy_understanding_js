@@ -103,7 +103,7 @@
         self.lastName = lastname || '';
         self.language = language || 'en';
 
-        self.validate(lang);
+        self.validate(self.language);
 
     }
 
