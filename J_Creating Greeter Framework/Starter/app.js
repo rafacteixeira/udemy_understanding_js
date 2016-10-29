@@ -7,3 +7,5 @@ g.greet(true)
     .greet(true)
     .greet(false)
     .setLang('pt_BR');
+
+g.setLang('en').HTMLGreet($('#greeting'), false);
