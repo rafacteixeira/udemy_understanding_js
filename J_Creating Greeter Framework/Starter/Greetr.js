@@ -83,10 +83,14 @@
         self.lastName = lastname || '';
         self.language = language || 'en';
 
+        self.validate(lang);
+
     }
 
+    //Linha que determina que o prototype do objeto criado pela function init será o mesmo que o prototype da function que representa o framework
     Greetr.init.prototype = Greetr.prototype;
 
+    //expõe o framework no objeto global, e cria também o Alias G$
     global.Greetr = global.G$ = Greetr;
 
 }(window, jQuery));
